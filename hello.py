@@ -94,6 +94,7 @@ def reverse_engineer(data, reply):
 
 @app.route("/", methods=['GET', 'POST'])
 def root():
+    global database_identifier
     print request.data
     data = request.get_json()
     request_type = data['RequestType']
